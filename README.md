@@ -223,10 +223,6 @@ Home bottom nav: Home | Search | My Tickets | Profile
 ## 👤 Author
 
 **Dhanush Palani Vijay Kumari**
-- GitHub: [github.com/dhanush-pv](https://github.com/dhanush-pv)
-- LinkedIn: [linkedin.com/in/dhanushpalani-vijay-kumari](https://linkedin.com/in/dhanushpalani-vijay-kumari)
-- Email: dhanush.palani.vijay.kumari.job@gmail.com
-- Location: Berlin, Germany
 
 ---
 
