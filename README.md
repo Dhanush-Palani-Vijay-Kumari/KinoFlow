@@ -4,19 +4,6 @@
 
 ---
 
-## 📸 Screenshots
-
-<p align="center">
-  <img src="assets/images/screenshot_home.svg" width="30%" alt="Home Screen"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="assets/images/screenshot_seats.svg" width="30%" alt="Seat Selection"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="assets/images/screenshot_confirmation.svg" width="30%" alt="Booking Confirmation"/>
-</p>
-
-
----
-
 ## 📱 About
 
 KinoFlow is a cross-platform cinema ticket booking app for Android and iOS. It features German and international films, bilingual support (English/German), seat selection.
