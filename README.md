@@ -1,0 +1,235 @@
+# 🎬 KinoFlow
+
+**Cinema ticket booking application** built with Flutter.
+
+**Created by: Dhanush Palani Vijay Kumari**
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="assets/images/screenshot_home.svg" width="30%" alt="Home Screen"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/images/screenshot_seats.svg" width="30%" alt="Seat Selection"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/images/screenshot_confirmation.svg" width="30%" alt="Booking Confirmation"/>
+</p>
+
+<p align="center">
+  <em>Home — Browse German &amp; International Films</em>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <em>Seat Selection — Interactive Cinema Grid</em>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <em>Booking Confirmation — Ticket with Barcode</em>
+</p>
+
+---
+
+## 📱 About
+
+KinoFlow is a cross-platform cinema ticket booking app for Android and iOS. It features German and international films, bilingual support (English/German), seat selection, and booking history backed by Firebase.
+
+This project is part of the portfolio for **Dhanush Palani Vijay Kumari** — M.Sc. AI & Robotics student at Hochschule Hof with 3 years of mobile development experience (Android/iOS).
+
+---
+
+## ✨ Features
+
+- 🇩🇪🌍 **German & International films** — browse both categories
+- 🌐 **Two language modes** — English and Deutsch (toggle in-app)
+- 🎟️ **Seat selection** — interactive cinema seat grid (booked/available/selected)
+- 📅 **Showtime selection** — multi-day, multi-cinema showtimes
+- 🔐 **Firebase Authentication** — real login & register via `firebase_auth`
+- 🗄️ **Cloud Firestore** — movies and bookings stored in Firestore with offline fallback
+- 🌐 **REST API** — Dio + Retrofit integration for TMDB API (plug in your API key)
+- 💾 **Local persistence** — SharedPreferences for offline-first caching
+- 🗂️ **My Tickets** — upcoming vs past tabs, greyscale for past tickets
+- 👤 **Profile** — user stats, EN↔DE language switcher, logout with confirmation
+- 🔍 **Search** — live search by title, director, or genre
+- 🎨 **Dark theme** — cinematic dark UI with KinoFlow red accent
+- ✨ **Shimmer loading** — skeleton screens while data loads
+
+---
+
+## 🏗️ Architecture
+
+```
+lib/
+├── core/
+│   ├── constants/         # AppColors, AppTextStyles, AppConstants
+│   ├── firebase/          # DefaultFirebaseOptions (FlutterFire config)
+│   └── theme/             # AppTheme (dark)
+├── data/
+│   ├── datasources/       # MockMovieData (local fallback)
+│   ├── repositories/      # MovieRepository, BookingRepository, AuthRepository
+│   └── services/          # MovieApiService (Dio/Retrofit REST)
+├── domain/
+│   └── entities/          # Movie, Showtime, Booking, AppUser
+├── presentation/
+│   ├── blocs/             # MovieBloc, BookingBloc, AuthBloc, LocaleBloc
+│   ├── pages/             # 11 screens
+│   └── widgets/           # 6 reusable widgets
+└── main.dart              # Firebase init + app entry + routing
+```
+
+**Clean Architecture** with BLoC state management, Repository pattern, and Dependency Injection via `MultiBlocProvider`.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Flutter (Dart) |
+| State Management | `flutter_bloc` + `equatable` |
+| Backend | Firebase Auth + Cloud Firestore |
+| REST API | `dio` + `retrofit` (TMDB-compatible) |
+| Local Storage | `shared_preferences` (offline cache) |
+| Navigation | Named routes (`MaterialApp.onGenerateRoute`) |
+| Localization | Flutter `gen-l10n` (ARB files) |
+| Architecture | Clean Architecture + BLoC + Repository Pattern |
+| Fonts | Poppins |
+
+---
+
+## 🔥 Firebase Setup
+
+1. Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
+2. Enable **Authentication → Email/Password**
+3. Enable **Cloud Firestore** (start in test mode)
+4. Run `flutterfire configure` to auto-generate `firebase_options.dart`  
+   *(or manually replace placeholder values in `lib/core/firebase/firebase_options.dart`)*
+5. Add `google-services.json` to `android/app/`
+6. Add `GoogleService-Info.plist` to `ios/Runner/`
+
+### Firestore security rules (recommended)
+```javascript
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId;
+    }
+    match /movies/{movieId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /bookings/{bookingId} {
+      allow read, write: if request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null;
+    }
+  }
+}
+```
+
+---
+
+## 🌐 REST API Setup (TMDB)
+
+1. Get a free API key from [themoviedb.org](https://www.themoviedb.org/settings/api)
+2. Replace `YOUR_TMDB_API_KEY` in `lib/data/services/movie_api_service.dart`
+3. The app falls back to local mock data when the key is not set
+
+---
+
+## 🌐 Localization
+
+Two languages supported:
+
+- **English** (`l10n/app_en.arb`)
+- **Deutsch** (`l10n/app_de.arb`)
+
+Toggle using the flag button anywhere in the app. Preference is persisted.
+
+---
+
+## 🎬 Movies
+
+### 🇩🇪 German Films
+Das Leben der Anderen · Lola rennt · Good Bye, Lenin! · Der Untergang · Das Parfum · Honig im Kopf
+
+### 🌍 International Films
+Oppenheimer · Dune: Part Two · The Zone of Interest · Poor Things · All Quiet on the Western Front · Past Lives · Anatomy of a Fall
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK `>=3.0.0`
+- Dart SDK `>=3.0.0`
+- Firebase project (see Firebase Setup above)
+
+### Setup
+
+```bash
+# 1. Clone
+git clone https://github.com/dhanush-pv/kinoflow.git
+cd kinoflow
+
+# 2. Install dependencies
+flutter pub get
+
+# 3. Generate localization files
+flutter gen-l10n
+
+# 4. Configure Firebase (see Firebase Setup section)
+flutterfire configure
+
+# 5. Run
+flutter run
+```
+
+### Build
+
+```bash
+# Android APK
+flutter build apk --release
+
+# iOS
+flutter build ios --release
+```
+
+---
+
+## 📸 Screen Flow
+
+```
+Splash → Onboarding (first launch) → Login / Register
+                                           ↓
+                                     Home (browse movies)
+                                           ↓
+                              Movie Detail → Select Showtime
+                                                   ↓
+                                          Seat Selection → Confirmation
+
+Home bottom nav: Home | Search | My Tickets | Profile
+```
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] Push notifications (Firebase Cloud Messaging)
+- [ ] QR code rendering for tickets
+- [ ] Payment integration (Stripe)
+- [ ] Trailer playback (YouTube API)
+- [ ] Google Maps for cinema locations
+- [ ] More languages (Turkish, Spanish, French)
+
+---
+
+## 👤 Author
+
+**Dhanush Palani Vijay Kumari**
+- GitHub: [github.com/dhanush-pv](https://github.com/dhanush-pv)
+- LinkedIn: [linkedin.com/in/dhanushpalani-vijay-kumari](https://linkedin.com/in/dhanushpalani-vijay-kumari)
+- Email: dhanush.palani.vijay.kumari.job@gmail.com
+- Location: Berlin, Germany
+
+---
+
+## 📄 License
+
+MIT License — see [LICENSE](LICENSE) for details.

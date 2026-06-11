@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <defs>
+    <linearGradient id="successRing" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="#0A0A0F"/>
+
+  <!-- Status bar -->
+  <text x="20" y="22" fill="#F5F5F5" font-size="12" font-family="Arial" font-weight="600">9:41</text>
+  <rect x="310" y="12" width="28" height="14" rx="3" fill="none" stroke="#F5F5F5" stroke-width="1.5" opacity="0.8"/>
+  <rect x="312" y="14" width="20" height="10" rx="2" fill="#F5F5F5" opacity="0.8"/>
+
+  <!-- Success icon -->
+  <circle cx="195" cy="130" r="56" fill="#22C55E" opacity="0.12"/>
+  <circle cx="195" cy="130" r="44" fill="none" stroke="#22C55E" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="195" cy="130" r="36" fill="#22C55E" opacity="0.15"/>
+  <text x="195" y="144" text-anchor="middle" fill="#22C55E" font-size="38" font-family="Arial" font-weight="700">✓</text>
+
+  <!-- Heading -->
+  <text x="195" y="212" text-anchor="middle" fill="#F5F5F5" font-size="22" font-family="Arial" font-weight="700">Booking Confirmed!</text>
+  <text x="195" y="234" text-anchor="middle" fill="#9E9EB3" font-size="14" font-family="Arial">Enjoy your movie!</text>
+
+  <!-- Ticket card -->
+  <rect x="24" y="256" width="342" height="320" rx="18" fill="#1E1E2E" stroke="#2A2A3E" stroke-width="0.5"/>
+
+  <!-- Ticket top section -->
+  <!-- Poster -->
+  <rect x="40" y="272" width="62" height="88" rx="8" fill="#1a3a5c"/>
+  <rect x="40" y="272" width="62" height="88" rx="8" fill="#2A3A50" opacity="0.8"/>
+  <!-- Movie info -->
+  <text x="116" y="292" fill="#F5F5F5" font-size="15" font-family="Arial" font-weight="700">Dune: Part Two</text>
+  <text x="116" y="312" fill="#9E9EB3" font-size="12" font-family="Arial">Cinestar Berlin</text>
+  <text x="116" y="330" fill="#5C5C7A" font-size="11" font-family="Arial">Thu, 12 Jun 2026</text>
+  <text x="116" y="346" fill="#5C5C7A" font-size="11" font-family="Arial">20:30  •  Saal 3 (IMAX)</text>
+
+  <!-- Dashed divider -->
+  <line x1="24" y1="376" x2="366" y2="376" stroke="#2A2A3E" stroke-width="1" stroke-dasharray="6 4"/>
+  <!-- Notch circles on divider -->
+  <circle cx="24"  cy="376" r="10" fill="#0A0A0F"/>
+  <circle cx="366" cy="376" r="10" fill="#0A0A0F"/>
+
+  <!-- Bottom ticket details -->
+  <text x="40" y="402" fill="#5C5C7A" font-size="10" font-family="Arial">SEATS</text>
+  <text x="40" y="420" fill="#F5F5F5" font-size="13" font-family="Arial" font-weight="600">A8, B6, B7</text>
+
+  <text x="200" y="402" fill="#5C5C7A" font-size="10" font-family="Arial">TOTAL PRICE</text>
+  <text x="200" y="420" fill="#E50914" font-size="16" font-family="Arial" font-weight="700">€ 54.00</text>
+
+  <text x="40" y="448" fill="#5C5C7A" font-size="10" font-family="Arial">BOOKING ID</text>
+  <text x="40" y="466" fill="#F5F5F5" font-size="13" font-family="Arial" font-weight="600">A3F9D2B1</text>
+
+  <!-- Barcode simulation -->
+  <rect x="40" y="488" width="306" height="56" rx="8" fill="#141420"/>
+  <!-- Barcode bars -->
+  <rect x="52"  y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="57"  y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="60"  y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="66"  y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="70"  y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="75"  y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="78"  y="498" width="5"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="85"  y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="89"  y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="94"  y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="97"  y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="103" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="107" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="112" y="498" width="5"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="119" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="122" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="127" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="131" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="137" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="140" y="498" width="6"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="148" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="152" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="157" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="160" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="166" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="171" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="175" y="498" width="5"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="182" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="185" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="190" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="194" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="200" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="203" y="498" width="6"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="211" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="215" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="220" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="223" y="498" width="5"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="230" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="234" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="239" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="245" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="248" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="253" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="257" y="498" width="5"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="264" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="267" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="272" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="276" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="282" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="285" y="498" width="6"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="293" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="297" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="302" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="305" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="311" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.3"/>
+  <rect x="315" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.7"/>
+  <rect x="320" y="498" width="5"  height="36" fill="#9E9EB3" opacity="0.6"/>
+  <rect x="327" y="498" width="1"  height="36" fill="#9E9EB3" opacity="0.5"/>
+  <rect x="330" y="498" width="3"  height="36" fill="#9E9EB3" opacity="0.8"/>
+  <rect x="335" y="498" width="2"  height="36" fill="#9E9EB3" opacity="0.4"/>
+  <rect x="339" y="498" width="4"  height="36" fill="#9E9EB3" opacity="0.7"/>
+
+  <!-- Go home button -->
+  <rect x="24" y="626" width="342" height="52" rx="14" fill="#E50914"/>
+  <text x="195" y="657" text-anchor="middle" fill="white" font-size="16" font-family="Arial" font-weight="700">Go to Home</text>
+
+  <!-- Footer credit -->
+  <text x="195" y="718" text-anchor="middle" fill="#5C5C7A" font-size="11" font-family="Arial">Made by Dhanush Palani Vijay Kumari</text>
+
+  <!-- Home indicator -->
+  <rect x="150" y="834" width="90" height="4" rx="2" fill="#F5F5F5" opacity="0.3"/>
+</svg>
