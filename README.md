@@ -2,8 +2,6 @@
 
 **Cinema ticket booking application** built with Flutter.
 
-**Created by: Dhanush Palani Vijay Kumari**
-
 ---
 
 ## 📸 Screenshots
@@ -28,9 +26,7 @@
 
 ## 📱 About
 
-KinoFlow is a cross-platform cinema ticket booking app for Android and iOS. It features German and international films, bilingual support (English/German), seat selection, and booking history backed by Firebase.
-
-This project is part of the portfolio for **Dhanush Palani Vijay Kumari** — M.Sc. AI & Robotics student at Hochschule Hof with 3 years of mobile development experience (Android/iOS).
+KinoFlow is a cross-platform cinema ticket booking app for Android and iOS. It features German and international films, bilingual support (English/German), seat selection.
 
 ---
 
@@ -90,46 +86,6 @@ lib/
 | Localization | Flutter `gen-l10n` (ARB files) |
 | Architecture | Clean Architecture + BLoC + Repository Pattern |
 | Fonts | Poppins |
-
----
-
-## 🔥 Firebase Setup
-
-1. Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
-2. Enable **Authentication → Email/Password**
-3. Enable **Cloud Firestore** (start in test mode)
-4. Run `flutterfire configure` to auto-generate `firebase_options.dart`  
-   *(or manually replace placeholder values in `lib/core/firebase/firebase_options.dart`)*
-5. Add `google-services.json` to `android/app/`
-6. Add `GoogleService-Info.plist` to `ios/Runner/`
-
-### Firestore security rules (recommended)
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /users/{userId} {
-      allow read, write: if request.auth.uid == userId;
-    }
-    match /movies/{movieId} {
-      allow read: if true;
-      allow write: if false;
-    }
-    match /bookings/{bookingId} {
-      allow read, write: if request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null;
-    }
-  }
-}
-```
-
----
-
-## 🌐 REST API Setup (TMDB)
-
-1. Get a free API key from [themoviedb.org](https://www.themoviedb.org/settings/api)
-2. Replace `YOUR_TMDB_API_KEY` in `lib/data/services/movie_api_service.dart`
-3. The app falls back to local mock data when the key is not set
 
 ---
 
@@ -212,8 +168,6 @@ Home bottom nav: Home | Search | My Tickets | Profile
 ## 🔮 Future Improvements
 
 - [ ] Push notifications (Firebase Cloud Messaging)
-- [ ] QR code rendering for tickets
-- [ ] Payment integration (Stripe)
 - [ ] Trailer playback (YouTube API)
 - [ ] Google Maps for cinema locations
 - [ ] More languages (Turkish, Spanish, French)
@@ -225,7 +179,3 @@ Home bottom nav: Home | Search | My Tickets | Profile
 **Dhanush Palani Vijay Kumari**
 
 ---
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
