@@ -14,13 +14,6 @@
   <img src="assets/images/screenshot_confirmation.svg" width="30%" alt="Booking Confirmation"/>
 </p>
 
-<p align="center">
-  <em>Home — Browse German &amp; International Films</em>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <em>Seat Selection — Interactive Cinema Grid</em>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <em>Booking Confirmation — Ticket with Barcode</em>
-</p>
 
 ---
 
